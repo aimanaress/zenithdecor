@@ -8,6 +8,15 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        ...defaultTheme.colors,
+        dark: {
+          primary: "#1A1A1A",
+          secondary: "#2E2E2E",
+        },
+        background: "#1A1A1A",
+        highlight: "#019863",
+      },
     },
   },
   plugins: [],
