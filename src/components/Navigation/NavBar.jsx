@@ -7,6 +7,7 @@ import {
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
+import Button from "../../shared/components/Button";
 import logo from "./zenithdecorlogo.png";
 
 const navigation = [
@@ -30,7 +31,7 @@ function NavBar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-dark-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -53,7 +54,7 @@ function NavBar() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            : "text-gray-300 hover:bg-dark-secondary hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -92,12 +93,13 @@ function NavBar() {
                   />
                 </div>
 
-                <button
+                {/* <button
                   type="button"
                   className="relative m-1 rounded-xl bg-dark-secondary p-2 text-white hover:text-dark-primary hover:bg-highlight focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <p className="h-6 w-20">Sign in</p>
-                </button>
+                </button> */}
+                <Button name="Sign in" />
 
                 <button
                   type="button"
@@ -105,8 +107,6 @@ function NavBar() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
-                  {/* <IoCartOutline className="h-6 w-6" aria-hidden="true" /> */}
                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
