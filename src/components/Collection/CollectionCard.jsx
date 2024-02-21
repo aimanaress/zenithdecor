@@ -10,9 +10,9 @@ import Button from "../../shared/components/Button";
 function CollectionCard(props) {
   return (
     <div className="w-full flex flex-row py-4">
-      <div className="h-[17rem] w-1/2 ">
+      <div className="h-[17rem] w-1/2 rounded-lg overflow-hidden">
         <img
-          className="h-full w-full overflow-hidden rounded-lg object-cover object-center"
+          className="h-full w-full overflow-hidden object-cover object-center hover:scale-110 transition duration-500 cursor-pointer object-cover"
           src={props.imgLink}
           alt="profile-picture"
         />
