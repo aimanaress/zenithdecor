@@ -7,25 +7,23 @@ import {
 } from "@material-tailwind/react";
 import Button from "../../shared/components/Button";
 
-function CollectionCard() {
+function CollectionCard(props) {
   return (
     <div className="w-full flex flex-row py-4">
       <div className="h-[17rem] w-1/2 ">
         <img
           className="h-full w-full overflow-hidden rounded-lg object-cover object-center"
-          src="https://docs.material-tailwind.com/img/team-3.jpg"
+          src={props.imgLink}
           alt="profile-picture"
         />
       </div>
       <div className="flex flex-col justify-between my-8 ml-8">
         <div className="">
-          <h2 className="text-white font-bold">Summer Collection</h2>
-          <p className="text-gray-500">
-            Experience the warmth of Scandinavian design
-          </p>
+          <h2 className="text-white font-bold">{props.title}</h2>
+          <p className="text-gray-500">{props.subtitle}</p>
         </div>
         <div>
-          <Button highlight className="" name="Explore Collection" />
+          <Button highlight className="" name={props.cta} />
         </div>
       </div>
     </div>
