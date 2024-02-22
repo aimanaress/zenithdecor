@@ -1,9 +1,11 @@
 import React from "react";
 import { Fragment } from "react";
+import { Input } from "@material-tailwind/react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
+  MagnifyingGlassIcon,
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
@@ -66,31 +68,47 @@ function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <span
-                  className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
-                  id="basic-addon2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                <div>
+                  {/* <span
+                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+                    id="basic-addon2"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                      clipRule="evenodd"
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span> */}
+                  <label className="flex flex-row relative text-white ">
+                    <MagnifyingGlassIcon
+                      className="h-6 w-6 absolute box-border m-3"
+                      aria-hidden="true"
                     />
-                  </svg>
-                </span>
-                <div className="">
-                  <input
-                    type="search"
+                    <input
+                      type="search"
+                      className="box-border pl-10 m-1 rounded-xl bg-dark-secondary p-2 focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight focus:text-white focus:outline-none"
+                      placeholder="Search"
+                      aria-label="Search"
+                      aria-describedby="button-addon2"
+                    />
+                  </label>
+                  {/* <Input
                     className="relative m-1 rounded-xl bg-dark-secondary p-2 text-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight focus:text-white focus:outline-none"
                     placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="button-addon2"
-                  />
+                    icon={
+                      <MagnifyingGlassIcon
+                        className="h-6 w-6"
+                        aria-hidden="true"
+                      />
+                    }
+                  /> */}
                 </div>
 
                 {/* <button
