@@ -16,8 +16,8 @@ function Hero() {
             className="overflow-hidden object-cover object-center hover:scale-110 transition duration-500 cursor-pointer object-cover"
             src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
           />
-          <div className="pointer-events-none to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
         </div>
+        <div className="pointer-events-none mt-12 rounded-lg to-bg-black-10 absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 " />
         <div className="absolute inset-0 top-1/2 bottom-1/2">
           <div className="flex flex-col items-center justify-center">
             <h2 className="font-bold text-4xl text-white">

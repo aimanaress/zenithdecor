@@ -45,7 +45,7 @@ function NavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img className="h-8 w-auto" src={logo} alt="Your Company" />
+                  <img className="h-8 w-auto" src={logo} alt="Zenith Decor" />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -57,7 +57,7 @@ function NavBar() {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-dark-secondary hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "rounded-xl px-3 py-2"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -68,38 +68,20 @@ function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div>
-                  {/* <span
-                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
-                    id="basic-addon2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span> */}
-                  <label className="flex flex-row relative text-white ">
-                    <MagnifyingGlassIcon
-                      className="h-6 w-6 absolute box-border m-3"
-                      aria-hidden="true"
-                    />
-                    <input
-                      type="search"
-                      className="box-border pl-10 m-1 rounded-xl bg-dark-secondary p-2 focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight focus:text-white focus:outline-none"
-                      placeholder="Search"
-                      aria-label="Search"
-                      aria-describedby="button-addon2"
-                    />
-                  </label>
-                  {/* <Input
+                <label className="flex flex-row relative text-white ">
+                  <MagnifyingGlassIcon
+                    className="h-6 w-6 absolute box-border m-3"
+                    aria-hidden="true"
+                  />
+                  <input
+                    type="search"
+                    className="box-border pl-10 m-1 rounded-xl bg-dark-secondary p-2 focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight focus:text-white focus:outline-none"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="button-addon2"
+                  />
+                </label>
+                {/* <Input
                     className="relative m-1 rounded-xl bg-dark-secondary p-2 text-white focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight focus:text-white focus:outline-none"
                     placeholder="Search"
                     icon={
@@ -109,7 +91,6 @@ function NavBar() {
                       />
                     }
                   /> */}
-                </div>
 
                 {/* <button
                   type="button"
@@ -118,15 +99,12 @@ function NavBar() {
                   <p className="h-6 w-20">Sign in</p>
                 </button> */}
                 <Button name="Sign in" />
-
-                <button
-                  type="button"
-                  className="relative m-1 rounded-xl bg-dark-secondary p-2 text-white hover:text-dark-primary hover:bg-highlight focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                <Button
+                  name={
+                    <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                  }
+                  icon
+                />
 
                 {/* Profile dropdown */}
                 {/* <Menu as="div" className="relative ml-3">
